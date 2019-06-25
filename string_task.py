@@ -1,0 +1,7 @@
+Time = input("Please Enter Time of Event ")
+items = input("Please enter item found ")
+name = input("Please Input owner's name ")
+scream = input("Please enter what he said ")
+action = input("Please enter what you did ")
+Story = 'It was %s o\'oclock when i hears a knock at the door.\nI opened the door and there was a box full of %s with a note saying "From Mr. %s".\nJust as i closed the door I heared a scream "%s".\nI froze in place and all i could do was %s' % (Time,items,name.capitalize(),scream.upper(),action)
+print(Story)

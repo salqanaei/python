@@ -1,3 +1,4 @@
+print("Welcome to the special recruitment program, please answer the following questions:")
 skills = ["Research", "Presentation", "Writing", "Analytics"]
 cv = {}
 Name = input("Please Enter Your Name: ")

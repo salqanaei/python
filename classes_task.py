@@ -24,51 +24,52 @@ class Manager(Employee):
 E = []
 M = []
 
-print("Welcome to HR Pro 2019")
+print("\tWelcome to HR Pro 2019")
 while True:
-	print("Choose an action to do: ")
-	print("1. show employees ")
-	print("2. show managers ")
-	print("3. add an employee ")
-	print("4. add a manager ")
-	print("5. exit ")
+	print("\tChoose an action to do: ")
+	print("\t\t1. show employees ")
+	print("\t\t2. show managers ")
+	print("\t\t3. add an employee ")
+	print("\t\t4. add a manager ")
+	print("\t\t5. exit ")
+	print()
 
 	choice = input("what would you like to do? ")
 	print("-----------------")
 
 	if choice == "3":
 		name = input("name: ")
-		E.append(name)
 		age = input("age: ")
-		E.append(age)
 		salary = input("salary: ")
-		E.append(salary)
 		year = input("employment year: ")
-		E.append(year)
+		
 		print("Employee added succesfully")
+		
+		employee = Employee(name, age, salary, year)
+		E.append(employee)
+
 
 	if choice == "1":
 		if len(E) == 0:
 			print("No Employee was added")
 
 			print("-----------------")
-		else:
-			E_1 = Employee(E[0], E[1], E[2], E[3])
-			print(E_1.__str__())
+		else:	
+			for employee in E:
+				print(employee.__str__())
 			print("-----------------")
 
 	if choice =="4":
 		name = input("name: ")
-		M.append(name)
 		age = input("age: ")
-		M.append(age)
 		salary = input("salary: ")
-		M.append(salary)
 		year = input("employment year: ")
-		M.append(year)
 		bonus_percentage = input("Bonus Percentage: ")
-		M.append(bonus_percentage)
+	
 		print("Employee added succesfully")
+
+		manager = Manager(name, age, salary, year, bonus_percentage)
+		M.append(manager)
 
 	if choice == "2":
 		if len(M) == 0:
@@ -76,8 +77,8 @@ while True:
 
 			print("-----------------")
 		else:
-			M_1=Manager(M[0], M[1], M[2], M[3], M[4])
-			print(M_1.__str__())
+			for manager in M:
+				print(manager.__str__())
 			print("-----------------")
 
 	if choice == "5":

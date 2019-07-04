@@ -24,6 +24,7 @@ class Manager(Employee):
 E = []
 M = []
 
+print("Welcome to HR Pro 2019")
 while True:
 	print("Choose an action to do: ")
 	print("1. show employees ")
@@ -46,10 +47,15 @@ while True:
 		E.append(year)
 		print("Employee added succesfully")
 
-	if choice == "1": 
-		E_1 = Employee(E[0], E[1], E[2], E[3])
-		print(E_1.__str__())
-		print("-----------------")
+	if choice == "1":
+		if len(E) == 0:
+			print("No Employee was added")
+
+			print("-----------------")
+		else:
+			E_1 = Employee(E[0], E[1], E[2], E[3])
+			print(E_1.__str__())
+			print("-----------------")
 
 	if choice =="4":
 		name = input("name: ")
@@ -65,9 +71,14 @@ while True:
 		print("Employee added succesfully")
 
 	if choice == "2":
-		M_1=Manager(M[0], M[1], M[2], M[3], M[4])
-		print(M_1.__str__())
-		print("-----------------")
+		if len(M) == 0:
+			print("No Employee was added")
+
+			print("-----------------")
+		else:
+			M_1=Manager(M[0], M[1], M[2], M[3], M[4])
+			print(M_1.__str__())
+			print("-----------------")
 
 	if choice == "5":
 		break
